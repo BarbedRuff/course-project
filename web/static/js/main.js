@@ -1,10 +1,6 @@
 const dropFileZone = document.querySelector(".upload-zone_dragover")
-const statusText = document.getElementById("uploadForm_Status")
 const uploadInput = document.querySelector(".form-upload__input")
 
-let setStatus = (text) => {
-  statusText.textContent = text
-}
 
 const uploadUrl = "/unicorns";
 
@@ -30,21 +26,29 @@ dropFileZone.addEventListener("drop", function() {
     return
   }
 
-  if (file.type.startsWith("image/")) {
+  if (file.type.startsWith("application/json")) {
     uploadInput.files = event.dataTransfer.files
     processingUploadFile()
+    const drop_area = document.getElementById("drop-zone");
+    const tube = document.getElementById("tube");
+    drop_area.style.display = "none";
+    tube.style.display = "block";
   } else {
-    setStatus("Можно загружать только изображения")
+    alert("Можно загружать только json")
     return false
   }
 })
 
 uploadInput.addEventListener("change", (event) => {
   const file = uploadInput.files?.[0]
-  if (file && file.type.startsWith("image/")) {
+  if (file && file.type.startsWith("application/json")) {
     processingUploadFile()
+    const drop_area = document.getElementById("drop-zone");
+    const tube = document.getElementById("tube");
+    drop_area.style.display = "none";
+    tube.style.display = "block";
   } else {
-    setStatus("Можно загружать только изображения")
+    alert("Можно загружать только json")
     return false
   }
 })
@@ -62,9 +66,9 @@ function processingUploadFile(file) {
 
     xhr.onload = function () {
       if (xhr.status == 200) {
-        setStatus("Всё загружено")
+        alert("Всё загружено")
       } else {
-        setStatus("Oшибка загрузки")
+        alert("Oшибка загрузки")
       }
       HTMLElement.style.display = "none"
     }
