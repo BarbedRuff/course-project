@@ -11,13 +11,6 @@ box-shadow: 7px 5px 5px #5CDB95;
 margin-top: 3%;
 }
 
-.tube{
-  display: none;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
 .smile{
 width: 100px;
@@ -41,7 +34,6 @@ padding-top: 3%;
 font-size: 1.2rem;
 }
 
-
 .upload-zone_dragover {
   display: grid;
   margin-bottom: 25px;
@@ -56,7 +48,15 @@ font-size: 1.2rem;
   text-align: center;
 }
 
-
+.tube{
+  display: none;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-top: 60px;
+  height: 50%;
+}
 
 .upload-zone_dragover._active {
   color: #5CDB95;
@@ -66,31 +66,39 @@ font-size: 1.2rem;
 
 .form-upload__label {
   display: flex;
-  justify-content: space-between;
-  margin-left: 30%;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
-.form-upload__title {
-  margin-right: 55px;
-  font-size: 18px;
-  font-weight: 500;
-}
 
 .form-upload__input {
   font-family: inherit;
   font-size: 18px;
+  margin-left: 43px;
 }
 
 .form-upload__input::file-selector-button {
-  margin-right: 30px;
   border: none;
-  border-radius: 6px;
-  padding: 9px 15px;
-  font-family: inherit;
+  border-radius: 30px;
+  padding: 9px 30px;
   font-weight: inherit;
   transition: background-color 0.2s linear;
   cursor: pointer;
+}
+.submit{
+  border: none;
+  border-radius: 30px;
+  padding: 9px 30px;
+  font-weight: inherit;
+  font-size: 18px;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.submit:hover{
+  background-color: #5CDB95;
 }
 
 .form-upload__input::file-selector-button:hover {
@@ -100,7 +108,6 @@ font-size: 1.2rem;
 .upload-zone_gragover {
   background-color: #593273;
 }
-
 
 .upload-loader {
   display: none;
@@ -135,7 +142,8 @@ font-size: 1.2rem;
 
   .form-upload__input::file-selector-button {
     min-width: initial;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto
   }
 }
 
