@@ -31,8 +31,10 @@ dropFileZone.addEventListener("drop", function() {
     processingUploadFile()
     const drop_area = document.getElementById("drop-zone");
     const tube = document.getElementById("tube");
+    const button = document.getElementById("send");
     drop_area.style.display = "none";
     tube.style.display = "block";
+    button.disabled = false;
   } else {
     alert("Можно загружать только json")
     return false
@@ -45,8 +47,10 @@ uploadInput.addEventListener("change", (event) => {
     processingUploadFile()
     const drop_area = document.getElementById("drop-zone");
     const tube = document.getElementById("tube");
+    const button = document.getElementById("send");
     drop_area.style.display = "none";
     tube.style.display = "block";
+    button.disabled = false;
   } else {
     alert("Можно загружать только json")
     return false
