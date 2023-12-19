@@ -60,12 +60,6 @@ font-size: 1.2rem;
   height: 50%;
 }
 
-.upload-zone_dragover._active {
-  color: #5CDB95;
-  background-color: #5CDB9577;
-
-}
-
 .form-upload__label {
   display: flex;
   margin-left: auto;
@@ -73,11 +67,10 @@ font-size: 1.2rem;
 
 }
 
-
 .form-upload__input {
   font-family: inherit;
   font-size: 18px;
-  margin-left: 43px;
+  margin-left: 10px;
 }
 
 .form-upload__input::file-selector-button {
@@ -96,7 +89,7 @@ font-size: 1.2rem;
   font-size: 18px;
   transition: background-color 0.2s linear;
   cursor: pointer;
-  margin-left: 40px;
+  margin-left: 25px;
 }
 
 .submit:hover{
